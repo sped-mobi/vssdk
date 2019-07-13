@@ -1,0 +1,12 @@
+﻿<Project>
+
+  <Sdk Name="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <UsingToolVsSDK>true</UsingToolVsSDK>
+    <VSProjectType>MEFComponent</VSProjectType>
+    <RootNamespace>$(RootNamespace)</RootNamespace>
+    <TargetFramework>$(TargetFramework)</TargetFramework>
+  </PropertyGroup>
+
+</Project>

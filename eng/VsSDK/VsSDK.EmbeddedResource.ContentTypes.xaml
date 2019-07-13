@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
+    <ContentType
+        Name="EmbeddedResource"
+        DisplayName="Embedded Resource"
+        ItemType="EmbeddedResource" />
+    <ItemType Name="EmbeddedResource" DisplayName="Embedded Resource" />
+    <FileExtension Name=".resx" ContentType="EmbeddedResource" />
+</ProjectSchemaDefinitions>

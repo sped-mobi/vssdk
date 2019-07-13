@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ProjectSchemaDefinitions  xmlns="http://schemas.microsoft.com/build/2009/properties">
+    <ContentType
+        Name="TextTemplate"
+        DisplayName="Text Template"
+        ItemType="None">
+      <NameValuePair Name="DefaultMetadata_Generator" Value="TextTemplatingFileGenerator" />
+    </ContentType>
+
+    <ItemType Name="None" DisplayName="None"/>
+
+    <FileExtension Name=".tt" ContentType="TextTemplate" />
+</ProjectSchemaDefinitions>

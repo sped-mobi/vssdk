@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Extern href="KnownImageIds.vsct" />
+
+  <Commands package="Package">
+    <Menus>
+      <Menu guid="PackageMenus" id="IDM_MENU" type="Menu" priority="0x0000">
+        <Strings>
+          <ButtonText>Menu</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+    <Groups>
+      <Group guid="PackageGroups" id="IDG_GROUP" priority="0x0000"/>
+    </Groups>
+    <Buttons>
+      <Button guid="PackageCommands" id="Command" type="Button" priority="0x0000">
+        <!--<Icon guid="ImageCatalogGuid" id="Restart"/>-->
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>IconAndText</CommandFlag>
+        <Strings>
+          <ButtonText>Restart</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <CommandPlacements>
+    <CommandPlacement guid="PackageCommands" id="Command" priority="0x0001">
+      <Parent guid="PackageGroups" id="IDG_GROUP"/>
+    </CommandPlacement>
+
+    <CommandPlacement guid="PackageGroups" id="IDG_GROUP" priority="0x0001">
+      <Parent guid="PackageMenus" id="IDM_MENU"/>
+    </CommandPlacement>
+
+    <CommandPlacement guid="PackageMenus" id="IDM_MENU" priority="0x0800">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS"/>
+    </CommandPlacement>
+  </CommandPlacements>
+
+  <Symbols>
+    <GuidSymbol name="Package" value="{9F7B718F-0C30-4C9F-92A5-D378853B429B}" />
+    <GuidSymbol name="PackageMenus" value="{0CFB4A3C-2DE1-4A08-AFDE-6F2A32575BC6}">
+      <IDSymbol name="IDM_MENU" value="0x0101"/>
+    </GuidSymbol>
+    <GuidSymbol name="PackageGroups" value="{0BC60032-F463-4104-A1AD-9BC6A5444C55}">
+      <IDSymbol name="IDG_GROUP" value="0x0011"/>
+    </GuidSymbol>
+    <GuidSymbol name="PackageCommands" value="{CA1431D8-8FBF-4BA4-B60E-8D0D452C55F6}">
+      <IDSymbol name="Command" value="0x0001"/>
+    </GuidSymbol>
+  </Symbols>
+  
+  
+</CommandTable>

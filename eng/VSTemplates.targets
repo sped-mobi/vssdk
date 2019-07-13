@@ -1,0 +1,66 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+
+  <PropertyGroup>
+    <DeployVSTemplates>true</DeployVSTemplates>
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <CreateVsixContainer>false</CreateVsixContainer>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <DeployExtension>false</DeployExtension>
+  </PropertyGroup>
+      
+  <ItemGroup>
+    <Compile Remove="**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="**\*.cs" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <None Remove="**\*.vstemplate" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <VSTemplate Include="**\*.vstemplate" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TemplatesDirectory>$(USERPROFILE)\Documents\Visual Studio 2019\Templates\</TemplatesDirectory>
+    <ItemTemplatesDirectory>$(TemplatesDirectory)ItemTemplates\</ItemTemplatesDirectory>
+    <ProjectTemplatesDirectory>$(TemplatesDirectory)ProjectTemplates\</ProjectTemplatesDirectory>
+  </PropertyGroup>
+
+
+  <PropertyGroup>
+    <OverwriteReadOnlyFiles>true</OverwriteReadOnlyFiles>
+  </PropertyGroup>
+
+  <Target Name="_ZipItems"
+          AfterTargets="ZipItems"
+          >
+    
+    <MakeDir Directories="@(IntermediateZipItem->'$(ItemTemplatesDirectory)%(Language)\%(OutputSubPath)\%(Culture)\')" />
+
+    <Copy SourceFiles="@(IntermediateZipItem)" 
+          DestinationFiles="@(IntermediateZipItem->'$(ItemTemplatesDirectory)%(Language)\%(OutputSubPath)\%(Culture)\%(FileName)%(Extension)')" />
+
+
+  </Target>
+
+  <Target Name="_ZipProjects"
+        AfterTargets="ZipProjects"
+        >
+
+    <MakeDir Directories="@(IntermediateZipProject->'$(ProjectTemplatesDirectory)%(Language)\%(OutputSubPath)\%(Culture)\')" />
+
+    <Copy SourceFiles="@(IntermediateZipProject)"
+      DestinationFiles="@(IntermediateZipProject->'$(ProjectTemplatesDirectory)%(Language)\%(OutputSubPath)\%(Culture)\%(FileName)%(Extension)')" />
+
+  </Target>
+</Project>

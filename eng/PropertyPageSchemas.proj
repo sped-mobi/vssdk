@@ -1,0 +1,66 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VsSDKEngineeringDir>$([MSBuild]::NormalizeDirectory('$(RepositoryEngineeringDir)', 'VsSDK'))</VsSDKEngineeringDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.ContentTypes.xaml">
+      <Context>Project</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSProject.ConfigurationGeneral.xaml">
+      <Context>Project;ProjectSubscriptionService</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSProject.GeneralBrowseObject.xaml">
+      <Context>BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSProject.GeneralConfiguredBrowseObject.xaml">
+      <Context>ConfiguredBrowseObject</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.None.BrowseObject.xaml">
+      <Context>BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.None.xaml">
+      <Context>File</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.EmbeddedResource.BrowseObject.xaml">
+      <Context>BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.EmbeddedResource.xaml">
+      <Context>File</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSTemplate.ContentTypes.xaml">
+      <Context>Project</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSTemplate.BrowseObject.xaml">
+      <Context>BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSTemplate.xaml">
+      <Context>File</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSCTCompile.ContentTypes.xaml">
+      <Context>Project</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSCTCompile.BrowseObject.xaml">
+      <Context>BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSCTCompile.xaml">
+      <Context>File</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+
+</Project>

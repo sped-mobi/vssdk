@@ -1,0 +1,79 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29006.145
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGenerator", "tools\CodeGenerator\CodeGenerator.csproj", "{$(CodeGeneratorProjectGuid)}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{$(BuildFolderGuid)}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		global.json = global.json
+		NuGet.config = NuGet.config
+		eng\PropertyPageSchemas.proj = eng\PropertyPageSchemas.proj
+		README.md = README.md
+		eng\Versions.props = eng\Versions.props
+		eng\VisualStudio.props = eng\VisualStudio.props
+		eng\VisualStudio.targets = eng\VisualStudio.targets
+		eng\VSTemplates.targets = eng\VSTemplates.targets
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualStudioSetup", "src\VisualStudioSetup\VisualStudioSetup.csproj", "{$(VisualStudioSetupProjectGuid)}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{$(ToolsFolderGuid)}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{$(TemplatesFolderGuid)}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{$(CoreFolderGuid)}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArcadeRepo.Package", "src\ArcadeRepo.Package\ArcadeRepo.Package.csproj", "{$(PackageProjectGuid)}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemTemplates", "src\ItemTemplates\ItemTemplates.csproj", "{$(ItemTemplatesProjectGuid)}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTemplates", "src\ProjectTemplates\ProjectTemplates.csproj", "{$(ProjectTemplatesProjectGuid)}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcadeRepo.Core", "src\ArcadeRepo.Core\ArcadeRepo.Core.csproj", "{$(CoreProjectGuid)}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{$(CodeGeneratorProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{$(CodeGeneratorProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{$(VisualStudioSetupProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{$(VisualStudioSetupProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{$(VisualStudioSetupProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{$(VisualStudioSetupProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
+		{$(PackageProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{$(PackageProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{$(PackageProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{$(PackageProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
+		{$(ItemTemplatesProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{$(ItemTemplatesProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{$(ItemTemplatesProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{$(ItemTemplatesProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
+		{$(ProjectTemplatesProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{$(ProjectTemplatesProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{$(ProjectTemplatesProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{$(ProjectTemplatesProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
+		{$(CoreProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{$(CoreProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{$(CoreProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{$(CoreProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{$(CodeGeneratorProjectGuid)} = {$(ToolsFolderGuid)}
+		{$(PackageProjectGuid)} = {$(CoreFolderGuid)}
+		{$(ItemTemplatesProjectGuid)} = {$(TemplatesFolderGuid)}
+		{$(ProjectTemplatesProjectGuid)} = {$(TemplatesFolderGuid)}
+		{$(CoreProjectGuid)} = {$(CoreFolderGuid)}
+	EndGlobalSection
+EndGlobal

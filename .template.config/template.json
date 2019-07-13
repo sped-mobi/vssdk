@@ -1,0 +1,211 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Brad Marshall <bmarshall@sped.mobi>",
+  "preferNameDirectory": true,
+  "classifications": [ "Solution File" ],
+  "shortName": "vssdk",
+  "name": "VsSDK Solution",
+  "sourceName": "ArcadeRepo",
+  "description": "Visual Studio Extensibility Solution",
+  "identity": "Microsoft.VisualStudio.DotNetTemplates.Extensibility.VsSDK",
+  "groupIdentity": "Microsoft.VisualStudio.DotNetTemplates.Extensibility",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "RepoName": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": true,
+      "replaces": "$(RepoName)",
+      "description": "The name of the repository for GitHub.com"
+    },
+    "PackageName": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": true,
+      "replaces": "$(PackageName)",
+      "description": "The name of the Visual Studio Package."
+    },
+    "RootNamespace": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": true,
+      "replaces": "$(RootNamespace)",
+      "description": "The root namespace for projects in the solution."
+    },
+
+
+
+    "ExtensionDisplayName": {
+      "datatype": "text",
+      "type": "parameter",
+      "defaultValue": "MyExtensionDisplayName",
+      "isRequired": false,
+      "replaces": "$(ExtensionDisplayName)",
+      "description": "The display name of the extension in Visual Studio."
+    },
+
+    "ExtensionDescription": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": false,
+      "defaultValue": "Descrption of my extension.",
+      "replaces": "$(ExtensionDescription)",
+      "description": "The display name of the extension in Visual Studio."
+    },
+
+    "RepoBranch": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": false,
+      "defaultValue": "master",
+      "replaces": "$(RepoBranch)",
+      "description": "The repository branch name."
+    },
+    "RepoOrg": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": false,
+      "defaultValue": "sped-mobi",
+      "replaces": "$(RepoOrg)",
+      "description": "The organization associated with the repository account holder in GitHub."
+    },
+    "TargetFramework": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": false,
+      "defaultValue": "net472",
+      "replaces": "$(TargetFramework)",
+      "description": "The default .NET Framework of the solution."
+    },
+    "OfficialName": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": false,
+      "defaultValue": "MyProduct",
+      "replaces": "$(OfficialName)",
+      "description": "The Visual Studio Package Official Name."
+    },
+    "ProductDetails": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": false,
+      "defaultValue": "My Product Details",
+      "replaces": "$(ProductDetails)",
+      "description": "The Visual Studio Package Product Description/Details."
+    },
+    "ProductID": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": false,
+      "defaultValue": "MyProductID",
+      "replaces": "$(ProductID)",
+      "description": "The Visual Studio Package Product ID."
+    },
+
+    "ExtensionIdentity": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(ExtensionIdentity)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "CodeGeneratorProjectGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(CodeGeneratorProjectGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "ProjectTemplatesProjectGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(ProjectTemplatesProjectGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "ItemTemplatesProjectGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(ItemTemplatesProjectGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "VisualStudioSetupProjectGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(VisualStudioSetupProjectGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "PackageProjectGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(PackageProjectGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "CoreProjectGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(CoreProjectGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "BuildFolderGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(BuildFolderGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "CoreFolderGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(CoreFolderGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "ToolsFolderGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(ToolsFolderGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+    "TemplatesFolderGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(TemplatesFolderGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    }
+  },
+
+
+
+
+  "postActions": [
+    {
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Sdk Name="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <VSProjectType>VSIX</VSProjectType>
+    <RootNamespace>$(RootNamespace)</RootNamespace>
+    <TargetFramework>$(TargetFramework)</TargetFramework>
+    <TargetVsixContainerName>VisualStudioSetup.vsix</TargetVsixContainerName>
+    <IsVsixProject>true</IsVsixProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="*.html" />
+    <None Remove="License.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="source.extension.vsixmanifest" SubType="Designer" CodeGenerator=""/>
+    <Content Include="*.html" IncludeInVsix="true" CopyToOutputDirectory="Always" />
+    <Content Include="License.txt" IncludeInVsix="true" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
+    <ContentType
+        Name="VSTemplate"
+        DisplayName="VSTemplate"
+        ItemType="VSTemplate" />
+    <ItemType Name="VSTemplate" DisplayName="VSTemplate File" />
+    <FileExtension Name=".vstemplate" ContentType="VSTemplate" />
+</ProjectSchemaDefinitions>

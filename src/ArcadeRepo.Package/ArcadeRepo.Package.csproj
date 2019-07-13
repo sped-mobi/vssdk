@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Sdk Name="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <UsingToolVsSDK>true</UsingToolVsSDK>
+    <VSProjectType>VSPackage</VSProjectType>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <CreateVsixContainer>false</CreateVsixContainer>
+    <RootNamespace>$(RootNamespace)</RootNamespace>
+    <TargetFramework>$(TargetFramework)</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\eng\VsSDK\MefComponents.cs" Link="MefComponents.cs" />
+    <Compile Include="..\..\eng\VsSDK\VSLogger.cs" Link="VSLogger.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <VSCTCompile Include="Commands\CommandTable.vsct" ResourceName="Menus.ctmenu" Generator="" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Update="VSPackage.resx">
+      <Generator></Generator>
+      <MergeWithCTO>true</MergeWithCTO>
+      <ManifestResourceName>VSPackage</ManifestResourceName>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <Compile Update="Commands\CommandTable.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CommandTable.vsct</DependentUpon>
+    </Compile>
+    <Compile Update="Commands\MenuCommandGenerator.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MenuCommandGenerator.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <None Update="Commands\CommandTable.vsct">
+      <Generator>VsctGenerator</Generator>
+      <LastGenOutput>CommandTable.cs</LastGenOutput>
+    </None>
+    <None Update="Commands\MenuCommandGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MenuCommandGenerator.txt</LastGenOutput>
+    </None>
+    <None Update="Commands\MenuCommandGenerator.txt">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MenuCommandGenerator.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <VSCTCompile Update="Commands\CommandTable.vsct" ResourceName="Menus.ctmenu" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+</Project>
+

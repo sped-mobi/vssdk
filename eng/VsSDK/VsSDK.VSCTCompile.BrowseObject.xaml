@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--  Copyright, Microsoft Corporation, All rights reserved.  -->
+<Rule
+    xmlns="http://schemas.microsoft.com/build/2009/properties"
+    Name="VSCTCompile"
+    Description="File Properties"
+    DisplayName="General"
+    PageTemplate="generic"
+    PropertyPagesHidden="true">
+
+    <Rule.Categories>
+        <Category Name="General" DisplayName="General" />
+        <Category Name="Advanced" DisplayName="Advanced" />
+        <Category Name="Misc" DisplayName="Misc" />
+        <Category Name="VSIX" DisplayName="VSIX" />
+        <Category Name="Ngen" DisplayName="Ngen" />
+    </Rule.Categories>
+
+    <Rule.DataSource>
+        <DataSource
+            HasConfigurationCondition="False"
+            ItemType="VSCTCompile"
+            Persistence="ProjectFile" />
+    </Rule.DataSource>
+
+    <!--  Custom Properties  -->
+
+    <StringProperty
+        Name="ResourceName"
+        Default="Menus.ctmenu"
+        DisplayName="Resource Name" />
+
+    <!--  VsSDK Properties  -->
+
+    <BoolProperty
+        Name="IncludeInVSIX"
+        Category="VSIX"
+        Default="False"
+        Visible="true" />
+
+    <StringProperty
+        Name="VSIXSubPath"
+        Category="VSIX"
+        Description="Specifies the subpath under the InstallRoot where the file will be installed."
+        DisplayName="VSIX Sub Path" />
+
+    <EnumProperty
+        Name="InstallRoot"
+        Category="VSIX"
+        Description="Specifies which root directory to install the file. By default, the file will be installed to the extension directory."
+        DisplayName="Install Root">
+        <EnumProperty.AdmissibleValues>
+            <EnumValue Name="Default" IsDefault="True" />
+            <EnumValue Name="MSBuild" />
+            <EnumValue Name="Schemas" />
+            <EnumValue Name="PublicAssemblies" />
+            <EnumValue Name="Licenses" />
+            <EnumValue Name="ReferenceAssemblies" />
+            <EnumValue Name="RemoteDebugger" />
+            <EnumValue Name="VCTargets" />
+        </EnumProperty.AdmissibleValues>
+    </EnumProperty>
+
+
+    <BoolProperty
+        Name="Ngen"
+        Category="Ngen"
+        Description="Specifies if the assembly should be installed via ngen when the extension is installed.  NOTE: This setting will not affect dependencies referenced by this assembly.  Ngen is a tool that improves the performance of managed applications by installing pre-compiled processor-specific machine code in the native image cache on the local computer."
+        DisplayName="Ngen" />
+
+
+    <StringProperty
+        Name="NgenApplication"
+        Category="Ngen"
+        Description="Specifies the application to pass into ngen via the /ExeConfig switch."
+        DisplayName="Ngen Application" />
+
+    <EnumProperty
+        Name="NgenArchitecture"
+        Category="Ngen"
+        Description="Specifies the target architecture for the native image."
+        DisplayName="Ngen Architecture">
+        <EnumProperty.AdmissibleValues>
+            <EnumValue Name="NotSpecified" IsDefault="True" />
+            <EnumValue Name="X86" />
+            <EnumValue Name="X64" />
+            <EnumValue Name="All" />
+        </EnumProperty.AdmissibleValues>
+    </EnumProperty>
+
+    <StringProperty
+        Name="NgenPriority"
+        Category="Ngen"
+        Default="3"
+        Description="Specifies the ngen priority level."
+        DisplayName="Ngen Priority" />
+
+    <!--  Standard Properties  -->
+
+    <DynamicEnumProperty
+        Name="{}{ItemType}"
+        Category="Advanced"
+        Description="How the file relates to the build and deployment processes."
+        DisplayName="Build Action"
+        EnumProvider="ItemTypes" />
+
+    <BoolProperty Name="AutoGen" Visible="false" />
+
+    <EnumProperty
+        Name="CopyToOutputDirectory"
+        Category="Advanced"
+        Description="Specifies the source file will be copied to the output directory."
+        DisplayName="Copy to Output Directory">
+        <EnumProperty.AdmissibleValues>
+            <EnumValue
+                Name="Never"
+                DisplayName="Do not copy"
+                IsDefault="True" />
+            <EnumValue Name="Always" DisplayName="Copy always" />
+            <EnumValue Name="PreserveNewest" DisplayName="Copy if newer" />
+        </EnumProperty.AdmissibleValues>
+    </EnumProperty>
+
+    <StringProperty Name="CustomTool" Visible="false">
+        <StringProperty.DataSource>
+            <DataSource
+                HasConfigurationCondition="False"
+                ItemType="VSCTCompile"
+                PersistedName="Generator"
+                Persistence="ProjectFile"
+                SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty
+        Name="CustomToolNamespace"
+        Category="Advanced"
+        Description="The namespace into which the output of the custom tool is placed."
+        DisplayName="Custom Tool Namespace" />
+
+    <StringProperty Name="DependentUpon" Visible="false" />
+
+    <BoolProperty Name="DesignTime" Visible="false" />
+
+    <BoolProperty Name="DesignTimeSharedInput" Visible="false" />
+
+    <StringProperty
+        Name="Extension"
+        ReadOnly="true"
+        Visible="False">
+        <StringProperty.DataSource>
+            <DataSource
+                ItemType="VSCTCompile"
+                PersistedName="Extension"
+                Persistence="Intrinsic"
+                SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty
+        Name="FileNameAndExtension"
+        Category="Misc"
+        Description="Name of the file or folder."
+        DisplayName="File Name"
+        ReadOnly="true">
+        <StringProperty.DataSource>
+            <DataSource
+                ItemType="VSCTCompile"
+                PersistedName="FileNameAndExtension"
+                Persistence="Intrinsic"
+                SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty
+        Name="FullPath"
+        Category="Misc"
+        Description="Location of the file."
+        DisplayName="Full Path"
+        ReadOnly="true">
+        <StringProperty.DataSource>
+            <DataSource
+                ItemType="VSCTCompile"
+                PersistedName="FullPath"
+                Persistence="Intrinsic"
+                SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty
+        Name="Generator"
+        Category="Advanced"
+        Description="Specifies the tool that transforms a file at design time and places the output of that transformation into another file. For example, a dataset (.xsd) file comes with a default custom tool."
+        DisplayName="Custom Tool" />
+
+    <StringProperty
+        Name="Identity"
+        ReadOnly="true"
+        Visible="false">
+        <StringProperty.DataSource>
+            <DataSource
+                ItemType="VSCTCompile"
+                PersistedName="Identity"
+                Persistence="Intrinsic"
+                SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty Name="LastGenOutput" Visible="false" />
+
+    <StringProperty Name="Link" Visible="false">
+        <StringProperty.DataSource>
+            <DataSource SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <EnumProperty Name="SubType" Visible="false">
+        <EnumProperty.DataSource>
+            <DataSource
+                HasConfigurationCondition="false"
+                ItemType="VSCTCompile"
+                PersistedName="SubType"
+                Persistence="DesignTimeItemPropertiesStorage" />
+        </EnumProperty.DataSource>
+        <EnumProperty.AdmissibleValues>
+            <EnumValue Name="Designer" />
+            <EnumValue Name="Component" />
+            <EnumValue Name="Control" />
+            <EnumValue Name="Form" />
+            <EnumValue Name="Code" />
+        </EnumProperty.AdmissibleValues>
+    </EnumProperty>
+
+    <StringProperty
+        Name="URL"
+        ReadOnly="true"
+        Visible="false">
+        <StringProperty.DataSource>
+            <DataSource
+                ItemType="VSCTCompile"
+                PersistedName="FullPath"
+                Persistence="Intrinsic"
+                SourceOfDefaultValue="AfterContext" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <BoolProperty Name="Visible" Visible="false" />
+</Rule>

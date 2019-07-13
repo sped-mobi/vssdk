@@ -1,0 +1,78 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <SourceExtensionVsixManifestFile>$(MSBuildProjectDirectory)\source.extension.vsixmanifest</SourceExtensionVsixManifestFile>
+
+    <IsVsixProject>false</IsVsixProject>
+    <IsVsixProject Condition="'$(VSProjectType)'=='VSIX'">true</IsVsixProject>
+    <IsVsixProject Condition="Exists('$(SourceExtensionVsixManifestFile)')">true</IsVsixProject>
+
+    <IsVsPackageProject>false</IsVsPackageProject>
+    <IsVsPackageProject Condition="'$(VSProjectType)'=='VSPackage'">true</IsVsPackageProject>
+    <IsVsPackageProject Condition="'$(GeneratePkgDefFile)'=='true' AND '$(CreateVsixContainer)'=='false'">true</IsVsPackageProject>
+
+    <IsVsTemplateProject>false</IsVsTemplateProject>
+    <IsVsTemplateProject Condition="'$(VSProjectType)'=='VSTemplate'">true</IsVsTemplateProject>
+
+    <IsMefComponent>false</IsMefComponent>
+    <IsMefComponent Condition="'$(VSProjectType)'=='MEFComponent'">true</IsMefComponent>
+
+  </PropertyGroup>
+
+  <!--<Import Project="PropertyPageSchemas.proj" />-->
+  
+  <!--
+  
+  *** NOTE: Stick the proper PropertyGroup below before the first Sdk element or Import element in a project file ***
+  
+  === VSIX Project ===
+  
+  <PropertyGroup>
+    <UsingToolVsSDK>true</UsingToolVsSDK>
+    <AssemblyName>SomeName.vsix</AssemblyName>
+    <RootNamespace>SomeName.vsix</RootNamespace>
+    <TargetVsixContainerName>SomeName.vsix</TargetVsixContainerName>
+  </PropertyGroup>
+  
+  
+  === VSPackage Project ===
+  
+  <PropertyGroup>   
+    <UsingToolVsSDK>true</UsingToolVsSDK>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <CreateVsixContainer>false</CreateVsixContainer>    
+    <RootNamespace>SomeName</RootNamespace>
+    <AssemblyName>SomeName</AssemblyName>
+  </PropertyGroup>
+  
+  -->
+
+  <Choose>
+    <When Condition="'$(Configuration)'=='Debug'">
+      <PropertyGroup>
+        <IncludeDebugSymbolsInVSIXContainer>true</IncludeDebugSymbolsInVSIXContainer>
+        <IncludeDebugSymbolsInLocalVSIXDeployment>true</IncludeDebugSymbolsInLocalVSIXDeployment>
+        <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+        <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
+      </PropertyGroup>
+      <PropertyGroup>
+        <DebugType>full</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+        <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+        <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+        <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+      </PropertyGroup>
+      <PropertyGroup>
+        <DebugType>none</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  
+  
+</Project>
