@@ -1,0 +1,17 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <UsingToolVsSDK>true</UsingToolVsSDK>
+    <VSProjectType>VSPackage</VSProjectType>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <CreateVsixContainer>false</CreateVsixContainer>
+    <RootNamespace>$(RootNamespace)</RootNamespace>
+    <TargetFramework>$(TargetFramework)</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\eng\VsSDK\MefComponents.cs" Link="MefComponents.cs" />
+    <Compile Include="..\..\eng\VsSDK\VSLogger.cs" Link="VSLogger.cs" />
+  </ItemGroup>
+
+</Project>

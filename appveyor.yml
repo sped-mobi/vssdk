@@ -4,11 +4,11 @@ configuration: Release
 platform: Any CPU
 
 environment:
-  dotnetcore_version: netcoreapp2.2
+  target_framework: $(TargetFramework)
   package_id: ArcadeRepo
 
 artifacts:
-- path: artifacts/bin/$(package_id)/$(configuration)/$(dotnetcore_version)/*.dll
+- path: artifacts/bin/$(package_id)/$(configuration)/$(target_framework)/*.dll
   name: Binary File
 
 before_build:

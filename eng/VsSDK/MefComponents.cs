@@ -5,7 +5,7 @@ using VSPackage = Microsoft.VisualStudio.Shell.Package;
 
 namespace Microsoft.VisualStudio
 {
-    public static partial class MefComponents
+    internal static partial class MefComponents
     {
         public static TServiceImpl GetService<TService, TServiceImpl>()
         {

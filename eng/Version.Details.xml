@@ -6,4 +6,5 @@
       <Uri>https://github.com/dotnet/arcade</Uri>
       <Sha>062febd818fa51e82c7192782a6b6e6429cc81c8</Sha>
     </Dependency>
+  </ToolsetDependencies>
 </Dependencies>

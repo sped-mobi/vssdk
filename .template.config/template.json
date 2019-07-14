@@ -28,6 +28,13 @@
       "replaces": "$(PackageName)",
       "description": "The name of the Visual Studio Package."
     },
+    "SettingsPackageName": {
+      "datatype": "text",
+      "type": "parameter",
+      "isRequired": true,
+      "replaces": "$(SettingsPackageName)",
+      "description": "The name of the Visual Studio Package."
+    },
     "RootNamespace": {
       "datatype": "text",
       "type": "parameter",
@@ -113,6 +120,16 @@
         "format": "D"
       }
     },
+
+    "SettingsProjectGuid": {
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "$(SettingsProjectGuid)",
+      "parameters": {
+        "format": "D"
+      }
+    },
+
     "CodeGeneratorProjectGuid": {
       "type": "generated",
       "generator": "guid",

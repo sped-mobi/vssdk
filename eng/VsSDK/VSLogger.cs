@@ -1,4 +1,4 @@
-using Microsoft;
+﻿using Microsoft;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -8,7 +8,7 @@ using Task = System.Threading.Tasks.Task;
 /// <summary>
 /// A logger made specifically for Visual Studio extensions. Thank you Mads Christiansen.
 /// </summary>
-public static class VSLogger
+internal static class VSLogger
 {
     private static IVsOutputWindowPane pane;
     private static IServiceProvider _provider;
