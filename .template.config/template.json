@@ -13,9 +13,25 @@
     "language": "C#",
     "type": "item"
   },
+  "guids": [
+    "75E87631-D74D-4DC7-8EC2-8CEDC72F6489",
+    "68C0B63F-CCE5-417F-858E-B9700D5035B8",
+    "002FFFF8-16E3-46B9-95DC-C0352411AD32",
+    "2071BDC0-8E16-4FCD-99AA-E1F61E8F65B3",
+    "2717B768-D091-42FB-A343-AE85C8B9A6F7",
+    "EE528E6C-C3DC-4AB8-8342-2DB0A5FE3C7F",
+    "900C536E-B4DA-4962-9F97-E1E9AA7B39BB",
+    "E25FC295-803D-41B5-AF60-C3DC588CD79F",
+    "85F09892-FEC5-42C2-A8FF-CF0EE5F5A98B",
+    "86D7842C-6096-4408-88DF-BC26EE4981E5",
+    "D6D5A90F-FDBB-4714-95D2-994D5954C5E7",
+    "FB642328-09EE-459E-A902-9E9DB004DB50",
+    "F87D445F-0C6D-4F2E-A734-EAADCD6FA340"
+  ],
   "symbols": {
     "RepoName": {
       "datatype": "text",
+     
       "type": "parameter",
       "isRequired": true,
       "replaces": "$(RepoName)",
@@ -110,119 +126,130 @@
       "defaultValue": "MyProductID",
       "replaces": "$(ProductID)",
       "description": "The Visual Studio Package Product ID."
-    },
-
-    "ExtensionIdentity": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(ExtensionIdentity)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-
-    "SettingsProjectGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(SettingsProjectGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-
-    "CodeGeneratorProjectGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(CodeGeneratorProjectGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "ProjectTemplatesProjectGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(ProjectTemplatesProjectGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "ItemTemplatesProjectGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(ItemTemplatesProjectGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "VisualStudioSetupProjectGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(VisualStudioSetupProjectGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "PackageProjectGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(PackageProjectGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "CoreProjectGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(CoreProjectGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "BuildFolderGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(BuildFolderGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "CoreFolderGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(CoreFolderGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "ToolsFolderGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(ToolsFolderGuid)",
-      "parameters": {
-        "format": "D"
-      }
-    },
-    "TemplatesFolderGuid": {
-      "type": "generated",
-      "generator": "guid",
-      "replaces": "$(TemplatesFolderGuid)",
-      "parameters": {
-        "format": "D"
-      }
     }
-  },
 
+    //"ExtensionIdentity": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(ExtensionIdentity)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
 
+    //"SettingsProjectGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(SettingsProjectGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
 
+    //"CodeGeneratorProjectGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(CodeGeneratorProjectGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"ProjectTemplatesProjectGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(ProjectTemplatesProjectGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"ItemTemplatesProjectGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(ItemTemplatesProjectGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"VisualStudioSetupProjectGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(VisualStudioSetupProjectGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"PackageProjectGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(PackageProjectGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"CoreProjectGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(CoreProjectGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"BuildFolderGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(BuildFolderGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"CoreFolderGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(CoreFolderGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"ToolsFolderGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(ToolsFolderGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //},
+    //"TemplatesFolderGuid": {
+    //  "type": "generated",
+    //  "generator": "guid",
+    //  "replaces": "$(TemplatesFolderGuid)",
+    //  "parameters": {
+    //    "format": "D"
+    //  }
+    //}
 
-  "postActions": [
-    {
-      "description": "Restore NuGet packages required by this project.",
-      "manualInstructions": [
-        { "text": "Run 'dotnet restore'" }
-      ],
-      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
-      "continueOnError": true
-    }
-  ]
+  }
+  //"postActions": [
+  //  {
+  //    "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE",
+  //    "continueOnError": true,
+  //    "manualInstructions": [
+  //      {"text": "Add to solution."}
+  //    ]
+  //  },
+  //  {
+  //    "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+  //    "continueOnError": true,
+  //    "args": {
+  //      "redirectStandardOutput": "false",
+  //      "args": "Solution.sln",
+  //      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Preview\\Common7\\IDE\\devenv.exe"
+
+  //    },
+  //    "manualInstructions": [
+  //      {
+  //        "text": "Open the template in Visual Studio"
+  //      }
+  //    ]
+  //  }
+  //]
 }

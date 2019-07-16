@@ -16,6 +16,15 @@
     <Compile Include="..\..\eng\VsSDK\VSLogger.cs" Link="VSLogger.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="**\*.tt" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="**\*.tt" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <VSCTCompile Include="Commands\CommandTable.vsct" ResourceName="Menus.ctmenu" Generator="" />

@@ -10,6 +10,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PropertyPageSchema Include="$$(VsSDKEngineeringDir)VsSDK.AssemblyReference.xaml">
+      <Context>Project;BrowseObject</Context>
+    </PropertyPageSchema>
+    <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.ResolvedAssemblyReference.xaml">
+      <Context>ProjectSubscriptionService;BrowseObject</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+
+  <ItemGroup>
     <PropertyPageSchema Include="$(VsSDKEngineeringDir)VsSDK.VSProject.ConfigurationGeneral.xaml">
       <Context>Project;ProjectSubscriptionService</Context>
     </PropertyPageSchema>

@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29006.145
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGenerator", "tools\CodeGenerator\CodeGenerator.csproj", "{$(CodeGeneratorProjectGuid)}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGenerator", "tools\CodeGenerator\CodeGenerator.csproj", "{68C0B63F-CCE5-417F-858E-B9700D5035B8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{$(BuildFolderGuid)}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{FB642328-09EE-459E-A902-9E9DB004DB50}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
@@ -21,23 +21,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{$(BuildF
 		eng\VSTemplates.targets = eng\VSTemplates.targets
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualStudioSetup", "src\VisualStudioSetup\VisualStudioSetup.csproj", "{$(VisualStudioSetupProjectGuid)}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualStudioSetup", "src\VisualStudioSetup\VisualStudioSetup.csproj", "{002FFFF8-16E3-46B9-95DC-C0352411AD32}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{$(ToolsFolderGuid)}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{2071BDC0-8E16-4FCD-99AA-E1F61E8F65B3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{$(TemplatesFolderGuid)}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{2717B768-D091-42FB-A343-AE85C8B9A6F7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{$(CoreFolderGuid)}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EE528E6C-C3DC-4AB8-8342-2DB0A5FE3C7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemTemplates", "src\ItemTemplates\ItemTemplates.csproj", "{$(ItemTemplatesProjectGuid)}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemTemplates", "src\ItemTemplates\ItemTemplates.csproj", "{900C536E-B4DA-4962-9F97-E1E9AA7B39BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTemplates", "src\ProjectTemplates\ProjectTemplates.csproj", "{$(ProjectTemplatesProjectGuid)}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTemplates", "src\ProjectTemplates\ProjectTemplates.csproj", "{E25FC295-803D-41B5-AF60-C3DC588CD79F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArcadeRepo.Package", "src\ArcadeRepo.Package\ArcadeRepo.Package.csproj", "{$(PackageProjectGuid)}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArcadeRepo.Package", "src\ArcadeRepo.Package\ArcadeRepo.Package.csproj", "{85F09892-FEC5-42C2-A8FF-CF0EE5F5A98B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArcadeRepo.Core", "src\ArcadeRepo.Core\ArcadeRepo.Core.csproj", "{$(CoreProjectGuid)}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArcadeRepo.Core", "src\ArcadeRepo.Core\ArcadeRepo.Core.csproj", "{86D7842C-6096-4408-88DF-BC26EE4981E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArcadeRepo.Settings", "src\ArcadeRepo.Settings\ArcadeRepo.Settings.csproj", "{$(SettingsProjectGuid)}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArcadeRepo.Settings", "src\ArcadeRepo.Settings\ArcadeRepo.Settings.csproj", "{D6D5A90F-FDBB-4714-95D2-994D5954C5E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,42 +45,42 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{$(CodeGeneratorProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$(CodeGeneratorProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$(VisualStudioSetupProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$(VisualStudioSetupProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{$(VisualStudioSetupProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$(VisualStudioSetupProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
-		{$(PackageProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$(PackageProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{$(PackageProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$(PackageProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
-		{$(ItemTemplatesProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$(ItemTemplatesProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{$(ItemTemplatesProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$(ItemTemplatesProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
-		{$(ProjectTemplatesProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$(ProjectTemplatesProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{$(ProjectTemplatesProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$(ProjectTemplatesProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
-		{$(CoreProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$(CoreProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{$(CoreProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$(CoreProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
-		{$(SettingsProjectGuid)}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{$(SettingsProjectGuid)}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{$(SettingsProjectGuid)}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{$(SettingsProjectGuid)}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C0B63F-CCE5-417F-858E-B9700D5035B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C0B63F-CCE5-417F-858E-B9700D5035B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002FFFF8-16E3-46B9-95DC-C0352411AD32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002FFFF8-16E3-46B9-95DC-C0352411AD32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002FFFF8-16E3-46B9-95DC-C0352411AD32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002FFFF8-16E3-46B9-95DC-C0352411AD32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F09892-FEC5-42C2-A8FF-CF0EE5F5A98B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F09892-FEC5-42C2-A8FF-CF0EE5F5A98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F09892-FEC5-42C2-A8FF-CF0EE5F5A98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F09892-FEC5-42C2-A8FF-CF0EE5F5A98B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900C536E-B4DA-4962-9F97-E1E9AA7B39BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900C536E-B4DA-4962-9F97-E1E9AA7B39BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900C536E-B4DA-4962-9F97-E1E9AA7B39BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900C536E-B4DA-4962-9F97-E1E9AA7B39BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25FC295-803D-41B5-AF60-C3DC588CD79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25FC295-803D-41B5-AF60-C3DC588CD79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25FC295-803D-41B5-AF60-C3DC588CD79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25FC295-803D-41B5-AF60-C3DC588CD79F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D7842C-6096-4408-88DF-BC26EE4981E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D7842C-6096-4408-88DF-BC26EE4981E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D7842C-6096-4408-88DF-BC26EE4981E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D7842C-6096-4408-88DF-BC26EE4981E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D5A90F-FDBB-4714-95D2-994D5954C5E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D5A90F-FDBB-4714-95D2-994D5954C5E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D5A90F-FDBB-4714-95D2-994D5954C5E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D5A90F-FDBB-4714-95D2-994D5954C5E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{$(CodeGeneratorProjectGuid)} = {$(ToolsFolderGuid)}
-		{$(PackageProjectGuid)} = {$(CoreFolderGuid)}
-		{$(ItemTemplatesProjectGuid)} = {$(TemplatesFolderGuid)}
-		{$(ProjectTemplatesProjectGuid)} = {$(TemplatesFolderGuid)}
-		{$(CoreProjectGuid)} = {$(CoreFolderGuid)}
-		{$(SettingsProjectGuid)} = {$(CoreFolderGuid)}
+		{68C0B63F-CCE5-417F-858E-B9700D5035B8} = {2071BDC0-8E16-4FCD-99AA-E1F61E8F65B3}
+		{85F09892-FEC5-42C2-A8FF-CF0EE5F5A98B} = {EE528E6C-C3DC-4AB8-8342-2DB0A5FE3C7F}
+		{900C536E-B4DA-4962-9F97-E1E9AA7B39BB} = {2717B768-D091-42FB-A343-AE85C8B9A6F7}
+		{E25FC295-803D-41B5-AF60-C3DC588CD79F} = {2717B768-D091-42FB-A343-AE85C8B9A6F7}
+		{86D7842C-6096-4408-88DF-BC26EE4981E5} = {EE528E6C-C3DC-4AB8-8342-2DB0A5FE3C7F}
+		{D6D5A90F-FDBB-4714-95D2-994D5954C5E7} = {EE528E6C-C3DC-4AB8-8342-2DB0A5FE3C7F}
 	EndGlobalSection
 EndGlobal
